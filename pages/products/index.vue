@@ -9,13 +9,23 @@
 </template>
 
 <script setup>
-// Sert à définir le layout de la page
 definePageMeta({ layout: "products" });
 const runtimeConfig = useRuntimeConfig();
 
 const { data: products } = await useFetch(
   `${runtimeConfig.public.fakeStoreApiUrl}products`
 );
+
+// Override the default page title and meta tags
+useHead({
+  title: "Nuxt Dojo | Merch",
+  meta: [
+    {
+      name: "description",
+      content: "Nuxt Dojo | Merch",
+    },
+  ],
+});
 </script>
 
 <style scoped></style>
