@@ -6,11 +6,13 @@
       hic cupiditate magnam, accusantium qui expedita quos saepe nemo ut laborum
       odit veniam, totam non, dolorem quis vero quae velit?
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
 <script setup>
 definePageMeta({ layout: "default" });
+const { data } = await useFetch("/api/currency/GBP");
 </script>
 
 <style scoped></style>

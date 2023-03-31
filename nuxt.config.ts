@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   runtimeConfig: {
+    currencyApiKey: process.env.CURRENCY_API_KEY,
     public: {
       fakeStoreApiUrl: "https://fakestoreapi.com/",
+      currencyApiUrl: "https://api.currencyapi.com/v3/",
     },
   },
   modules: ["@nuxtjs/tailwindcss"],
